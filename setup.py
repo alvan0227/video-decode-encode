@@ -7,7 +7,7 @@ setup_kwargs = {
     "version": "0.0.1",
     "url": "https://github.com/alvan0227/video-decode-encode",
     "packages": ["video_encode/"],
-    "scripts": ["bin/youtube-drive"],
+    "scripts": ["bin/video_encode"],
     "license": "Apache-2.0 license",
     "long_description": " ".join(__doc__.strip().splitlines()),
     "classifiers": [
