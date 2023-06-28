@@ -3,11 +3,11 @@
 from distutils.core import setup
 
 setup_kwargs = {
-    "name": "video-encode-decode",
+    "name": "video-encode",
     "version": "0.0.1",
-    "url": "https://github.com/alvan0227/video-decode-encode",
+    "description": "Store files as mp4",
     "packages": ["video_encode/"],
-    "scripts": ["bin/video_encode"],
+    "scripts": ["bin/youtube-drive"],
     "license": "Apache-2.0 license",
     "long_description": " ".join(__doc__.strip().splitlines()),
     "classifiers": [
@@ -27,9 +27,8 @@ setup_kwargs = {
     "install_requires": [
         'numpy',
         'opencv-python',
-        'pillow',
+        'pillow'
     ],
-   
 }
 
 setup(**setup_kwargs)

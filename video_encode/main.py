@@ -3,7 +3,8 @@ import os
 import sys
 import uuid
 import argparse
-from yc import codec
+import codec
+
 
 
 def cmd_encode(args):
@@ -43,10 +44,14 @@ def main(args):
                                action='store',
                                help='Save the output file to this filename')
     decode_parser.set_defaults(handle=cmd_decode)
+
+
     arguments = parser.parse_args(args)
     if not hasattr(arguments, 'handle'):
         parser.print_help()
         sys.exit(1)
+
+    arguments.handle(arguments)
 
 
 def run():
@@ -54,9 +59,4 @@ def run():
 
 
 if __name__ == '__main__':
-    # video_id = youtebe_upload("./examples/upload.mp4")
-    # print(f"video_id: {video_id}")
-    # codec.encode("./examples/painting.jpg", "./examples/upload.mp4")
-    # codec.decode("./examples/upload.mp4", "./examples/painting-retrieved.jpg")
-    # retrieve("gKhXk3IGW2s", "./examples/painting-retrieved-3.jpg")
     main(sys.argv[1:])
